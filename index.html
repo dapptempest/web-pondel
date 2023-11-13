@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <title>Kelompok 2 | pondel</title>
-
+   
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/img/pd.jpg" type="image/jpg">
 
@@ -825,7 +825,7 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <select class="form-control">
+                          <select id="kedai" class="form-control">
                             <option value="0">Pilih Kedai</option>
                             <option value="1 Person">Ayam Mantul</option>
                             <option value="2 People">Seblak Bandung</option>
@@ -837,20 +837,19 @@
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <input type="text" class="form-control" placeholder="Masukkan Nomor Meja">              
+                          <input type="text" id="nomorMeja" class="form-control" placeholder="Masukkan Nomor Meja">              
                         </div>
                       </div>
                       <div class="col-md-12">
                         <div class="form-group">
-                          <textarea class="form-control" cols="30" rows="10" placeholder="Masukkan Pesanan Anda"></textarea>
+                          <textarea id="pesanan" class="form-control" cols="30" rows="10" placeholder="Masukkan Pesanan Anda"></textarea>
                         </div>
                       </div>
-                      <button type="submit" class="mu-readmore-btn">Buat Pesanan</button>
+                      <button type="button" onclick="showPopup()" class="mu-readmore-btn">Buat Pesanan</button>
                     </div>
                   </form>    
                 </div>
               </div>
-
               <div class="col-md-5 col-md-offset-1">
                 <div class="mu-reservation-right">
                   <div class="mu-opening-hour">
@@ -874,6 +873,15 @@
       </div>
     </div>
   </section>  
+
+  <!-- Popup -->
+  <div id="popup" class="popup">
+    <p>Pesanan di konfirmasi, mohon ditunggu ya!</p>
+    <button onclick="hidePopup()">Tutup</button>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay"></div>
   <!-- End Reservation section -->
 
   <!-- Start Gallery -->
@@ -1206,6 +1214,41 @@
  
   <!-- Custom js -->
   <script src="assets/js/custom.js"></script> 
+
+  <script>
+    function showPopup() {
+      // Menampilkan popup
+      document.getElementById('popup').style.display = 'block';
+      document.getElementById('overlay').style.display = 'block';
+
+      // Mendapatkan data dari formulir
+      var nama = document.getElementById('nama').value;
+      var kedai = document.getElementById('kedai').value;
+      var nomorMeja = document.getElementById('nomorMeja').value;
+      var pesanan = document.getElementById('pesanan').value;
+
+      // Validasi sederhana
+      if (!nama || !kedai || !nomorMeja || !pesanan) {
+        alert('Harap isi semua kolom!');
+        hidePopup();
+        return;
+      }
+
+      // Mengirim data ke server atau melakukan tindakan lain sesuai kebutuhan
+      // ...
+
+      // Opsi: Menyembunyikan popup setelah beberapa detik (misalnya, 3000 milidetik atau 3 detik)
+      setTimeout(function() {
+        hidePopup();
+      }, 3000);
+    }
+
+    function hidePopup() {
+      // Menyembunyikan popup
+      document.getElementById('popup').style.display = 'none';
+      document.getElementById('overlay').style.display = 'none';
+    }
+  </script>
 
   </body>
 </html>
