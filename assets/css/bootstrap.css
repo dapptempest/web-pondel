@@ -9,6 +9,70 @@ html {
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
+.mu-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mu-reservation-content {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .mu-reservation-left {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mu-reservation-form {
+            max-width: 400px;
+            width: 100%;
+        }
+
+        .mu-readmore-btn {
+            background-color: orange;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .mu-readmore-btn:hover {
+            background-color: #ff8c00;
+        }
+.popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: orange; /* Warna popup menjadi oranye */
+            border: 1px solid #ccc;
+            z-index: 1000;
+            text-align: center; /* Teks di tengah */
+        }
+
+        .popup button {
+            background-color: #fff; /* Warna tombol menjadi putih */
+            padding: 10px 20px;
+            border: 1px solid orange; /* Warna tepi tombol menjadi oranye */
+            cursor: pointer;
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
 body {
   margin: 0;
 }
