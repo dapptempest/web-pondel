@@ -254,8 +254,8 @@
               <ul class="nav nav-tabs mu-restaurant-menu">
                 <li class="active"><a href="#breakfast" data-toggle="tab">Ayam Mantul</a></li>
                 <li><a href="#meals" data-toggle="tab">Seblak Bandung</a></li>
-                <li><a href="#snacks" data-toggle="tab">Ramen dan Sushi</a></li>
-                <li><a href="#desserts" data-toggle="tab">Minuman Dingin dan Panas</a></li>
+                <li><a href="#snacks" data-toggle="tab">Ramen & Sushi</a></li>
+                <li><a href="#desserts" data-toggle="tab">Minuman Dingin & Panas</a></li>
                 <li><a href="#drinks" data-toggle="tab">Coffee & Juice</a></li>
               </ul>
 
@@ -445,7 +445,7 @@
                                   </a>
                                 </div>
                                 <div class="media-body">
-                                  <h4 class="media-heading"><a href="#">Baso Aci tulang rangu</a></h4>
+                                  <h4 class="media-heading"><a href="#">Baso Aci Tulang Rangu</a></h4>
                                   <span class="mu-menu-price">Rp. 15.000</span>
                                   <p>Isi dari menu tersebut : Baso aci, cikur, tulang rangu, cuanki somay kering. Pilih tingkat kepedasan 1-5.</p>
                                 </div>
@@ -800,88 +800,143 @@
   <!-- End Restaurant Menu -->
 
   <!-- Start Reservation section -->
-  <section id="mu-reservation">
-    <div class="container">
+<section id="mu-reservation">
+  <div class="container">
       <div class="row">
-        <div class="col-md-12">
-          <div class="mu-reservation-area">
-
-            <div class="mu-title">
-              <span class="mu-subtitle">Buat</span>
-              <h2>Pesanan</h2>
-            </div>
-
-            <div class="mu-reservation-content">
-              <p> Silahkan order pesanan anda dibawah sini.</p>
-
-              <div class="col-md-6">
-                <div class="mu-reservation-left">
-                  <form class="mu-reservation-form">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <div class="form-group">                       
-                          <input type="text" class="form-control" placeholder="Masukkan Nama Anda">
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <select id="kedai" class="form-control">
-                            <option value="0">Pilih Kedai</option>
-                            <option value="1 Person">Ayam Mantul</option>
-                            <option value="2 People">Seblak Bandung</option>
-                            <option value="3 People">Ramen & Sushi</option>
-                            <option value="4 People">Minuman dingin & panas</option>
-                            <option value="5 People">Coffee & Juice</option>
-                          </select>                      
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <input type="text" id="nomorMeja" class="form-control" placeholder="Masukkan Nomor Meja">              
-                        </div>
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-group">
-                          <textarea id="pesanan" class="form-control" cols="30" rows="10" placeholder="Masukkan Pesanan Anda"></textarea>
-                        </div>
-                      </div>
-                      <button type="button" onclick="showPopup()" class="mu-readmore-btn">Buat Pesanan</button>
-                    </div>
-                  </form>    
-                </div>
-              </div>
-              <div class="col-md-5 col-md-offset-1">
-                <div class="mu-reservation-right">
-                  <div class="mu-opening-hour">
-                    <h2>Jam Operasional</h2>
-                      <ul class="list-unstyled">
-                        <li>
-                            <p>Senin &amp; Jumat</p>
-                            <p>8:00 AM - 10:00 PM</p>
-                        </li>
-                        <li>
-                            <p>Sabtu &amp; Minggu</p>
-                            <p>9:00 AM - 11:00 PM</p>
-                        </li>
-                      </ul>
+          <div class="col-md-12">
+              <div class="mu-reservation-area">
+                  <div class="mu-title">
+                      <span class="mu-subtitle">Buat</span>
+                      <h2>Pesanan</h2>
                   </div>
-                </div>
+
+                  <div class="mu-reservation-content">
+                      <p>Silahkan order pesanan anda dibawah sini.</p>
+
+                      <div class="col-md-6">
+                          <div class="mu-reservation-left">
+                              <form class="mu-reservation-form">
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <input type="text" id="nama" class="form-control" placeholder="Masukkan Nama Anda">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <select id="kedai" class="form-control">
+                                            <!-- Menu options for Ayam Mantul -->
+                                              <option value="0">Silahkan Pilih Menu</option>
+                                            <optgroup label="Ayam Mantul">
+                                              <option value="ayamMantulMenu1">Ayam mantul paket 1</option>
+                                              <option value="ayamMantulMenu2">Ayam mantul paket 2</option>
+                                              <option value="ayamMantulMenu3">Bandeng mantul paket 1</option>
+                                              <option value="ayamMantulMenu4">Bandeng mantul paket2</option>
+                                              <option value="ayamMantulMenu5">Ayam Mantul Lada Hitam</option>
+                                              <option value="ayamMantulMenu6">Ayam Mantul Asam Manis</option>
+                                            </optgroup>
+                                            <optgroup label="Seblak Bandung">
+                                              <option value="seblakBandungMenu1">Seblak Original</option>
+                                              <option value="seblakBandungMenu2">Seblak Ceker</option>
+                                              <option value="seblakBandungMenu3">Seblak Tulang</option>
+                                              <option value="seblakBandungMenu4">Seblak Spesial</option>
+                                              <option value="seblakBandungMenu5">Baso Aci Tulang Rangu</option>
+                                              <option value="seblakBandungMenu6">Baso Aci Spesial</option>
+                                            </optgroup>
+                                            <optgroup label="Ramen dan Sushi">
+                                              <option value="sushiMenu1">Chicken Teriyaki Roll</option>
+                                              <option value="sushiMenu2">California Roll</option>
+                                              <option value="sushiMenu3">Sushi Fray Roll</option>
+                                              <option value="sushiMenu4">Chicken Katsu Ramen</option>
+                                              <option value="sushiMenu5">Beef Teriyaki Ramen</option>
+                                              <option value="sushiMenu6">Spicy Ramen</option>
+                                            </optgroup>
+                                            <optgroup label="Minuman Dingin dan Panas">
+                                              <option value="minumMenu1">Air Mineral</option>
+                                              <option value="minumMenu2">Aneka Minuman Teh</option>
+                                              <option value="minumMenu3">Fanta Susu</option>
+                                              <option value="minumMenu4">Coca Cola</option>
+                                              <option value="minumMenu5">Aneka Kopi</option>
+                                              <option value="minumMenu6">Floridina</option>
+                                            </optgroup>
+                                            <optgroup label="Coffee & Juice">
+                                                <option value="coffeeMenu1">Green Tea</option>
+                                                <option value="coffeeMenu2">Thai Tea</option>
+                                                <option value="coffeeMenu3">Cofee Avocado</option>
+                                                <option value="coffeeMenu4">Jus Jambu</option>
+                                                <option value="coffeeMenu5">Jus Alpukat</option>
+                                                <option value="coffeeMenu6">Jus Jeruk</option>
+                                              </optgroup>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                        <div class="form-group">
+                                          <select id="qty" class="form-control">
+                                            <option value="0">Berapa Banyak ?</option>
+                                            <option value="1 Person">1</option>
+                                            <option value="2 People">2</option>
+                                            <option value="3 People">3</option>
+                                            <option value="4 People">4</option>
+                                            <option value="5 People">5</option>
+                                          </select>                      
+                                        </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <input type="text" id="nomorMeja" class="form-control" placeholder="Masukkan Nomor Meja">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <textarea id="pesanan" class="form-control" cols="30" rows="10" placeholder="Masukkan Pesanan Anda"></textarea>
+                                          </div>
+                                      </div>
+                                      <div class="col-md-12">
+                                          <button type="button" onclick="showPopup()" class="mu-readmore-btn">Buat Pesanan</button>
+                                    </div>
+                                </form>
+                            </div>
+                      </div>
+                  </div>
+                  <div class="col-md-5 col-md-offset-1">
+                      <div class="mu-reservation-right">
+                          <div class="mu-opening-hour">
+                              <h2>Jam Operasional</h2>
+                              <ul class="list-unstyled">
+                                  <li>
+                                      <p>Senin &amp; Jumat</p>
+                                      <p>8:00 AM - 10:00 PM</p>
+                                  </li>
+                                  <li>
+                                      <p>Sabtu &amp; Minggu</p>
+                                      <p>9:00 AM - 11:00 PM</p>
+                                  </li>
+                              </ul>
+                          </div>
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
-        </div>
       </div>
-    </div>
-  </section>  
-
-  <!-- Popup -->
-  <div id="popup" class="popup">
-    <p>Pesanan di konfirmasi, mohon ditunggu ya!</p>
-    <button onclick="hidePopup()">Tutup</button>
   </div>
+</section>
 
-  <!-- Overlay -->
-  <div id="overlay" class="overlay"></div>
+<div id="popup" class="popup">
+  <h2>Pesanan Anda di Konfimasi!</h2>
+  <div id="popup-content">
+    <p id="confirmNama"></p>
+    <p id="confirmKedai"></p>
+    <p id="confirmQty"></p>
+    <p id="confirmNomorMeja"></p>
+    <p id="confirmPesanan"></p>
+  </div>
+  <button onclick="hidePopup()">Tutup</button>
+</div>
+
+<!-- Overlay -->
+<div id="overlay" class="overlay"></div>
+
   <!-- End Reservation section -->
 
   <!-- Start Gallery -->
@@ -1217,22 +1272,23 @@
 
   <script>
     function showPopup() {
-      // Menampilkan popup
-      document.getElementById('popup').style.display = 'block';
-      document.getElementById('overlay').style.display = 'block';
+      var nama = document.getElementById("nama").value;
+      var kedai = document.getElementById("kedai").options[document.getElementById("kedai").selectedIndex].text;
+      var qty = document.getElementById("qty").options[document.getElementById("qty").selectedIndex].text;
+      var nomorMeja = document.getElementById("nomorMeja").value;
+      var pesanan = document.getElementById("pesanan").value;
 
-      // Mendapatkan data dari formulir
-      var nama = document.getElementById('nama').value;
-      var kedai = document.getElementById('kedai').value;
-      var nomorMeja = document.getElementById('nomorMeja').value;
-      var pesanan = document.getElementById('pesanan').value;
+      document.getElementById("confirmNama").innerText = "Nama : " + nama;
+      document.getElementById("confirmKedai").innerText = "Kedai : " + kedai;
+      document.getElementById("confirmQty").innerText = "Berapa Banyak : " + qty;
+      document.getElementById("confirmNomorMeja").innerText = "Nomor Meja : " + nomorMeja;
+      document.getElementById("confirmPesanan").innerText = "Pesanan : " + pesanan;
 
-      // Validasi sederhana
-      if (!nama || !kedai || !nomorMeja || !pesanan) {
-        alert('Harap isi semua kolom!');
-        hidePopup();
-        return;
-      }
+      var overlay = document.getElementById("overlay");
+      var popup = document.getElementById("popup");
+
+      overlay.style.display = "block";
+      popup.style.display = "block";
 
       // Mengirim data ke server atau melakukan tindakan lain sesuai kebutuhan
       // ...
@@ -1240,7 +1296,14 @@
       // Opsi: Menyembunyikan popup setelah beberapa detik (misalnya, 3000 milidetik atau 3 detik)
       setTimeout(function() {
         hidePopup();
-      }, 3000);
+      }, 10000000);
+
+      // Clear form fields
+        document.getElementById("nama").value = "";
+        document.getElementById("kedai").value = "0";
+        document.getElementById("qty").value = "0";
+        document.getElementById("nomorMeja").value = "";
+        document.getElementById("pesanan").value = "";
     }
 
     function hidePopup() {
