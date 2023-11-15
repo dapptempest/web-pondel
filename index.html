@@ -828,10 +828,10 @@
                                             <!-- Menu options for Ayam Mantul -->
                                               <option value="0">Silahkan Pilih Menu</option>
                                             <optgroup label="Ayam Mantul">
-                                              <option value="ayamMantulMenu1">Ayam mantul paket 1</option>
-                                              <option value="ayamMantulMenu2">Ayam mantul paket 2</option>
-                                              <option value="ayamMantulMenu3">Bandeng mantul paket 1</option>
-                                              <option value="ayamMantulMenu4">Bandeng mantul paket2</option>
+                                              <option value="ayamMantulMenu1">Ayam Mantul Paket 1</option>
+                                              <option value="ayamMantulMenu2">Ayam Mantul Paket 2</option>
+                                              <option value="ayamMantulMenu3">Bandeng Mantul Paket 1</option>
+                                              <option value="ayamMantulMenu4">Bandeng Mantul Paket2</option>
                                               <option value="ayamMantulMenu5">Ayam Mantul Lada Hitam</option>
                                               <option value="ayamMantulMenu6">Ayam Mantul Asam Manis</option>
                                             </optgroup>
@@ -872,15 +872,8 @@
                                       </div>
                                       <div class="col-md-12">
                                         <div class="form-group">
-                                          <select id="qty" class="form-control">
-                                            <option value="0">Berapa Banyak ?</option>
-                                            <option value="1 Person">1</option>
-                                            <option value="2 People">2</option>
-                                            <option value="3 People">3</option>
-                                            <option value="4 People">4</option>
-                                            <option value="5 People">5</option>
-                                          </select>                      
-                                        </div>
+                                            <input type="text" id="qty" class="form-control" placeholder="Berapa Banyak?">
+                                          </div>
                                       </div>
                                       <div class="col-md-12">
                                           <div class="form-group">
@@ -889,7 +882,7 @@
                                       </div>
                                       <div class="col-md-12">
                                           <div class="form-group">
-                                              <textarea id="pesanan" class="form-control" cols="30" rows="10" placeholder="Masukkan Pesanan Anda"></textarea>
+                                              <textarea id="pesanan" class="form-control" cols="30" rows="5" placeholder="Catatan"></textarea>
                                           </div>
                                       </div>
                                       <div class="col-md-12">
@@ -1274,7 +1267,7 @@
     function showPopup() {
       var nama = document.getElementById("nama").value;
       var kedai = document.getElementById("kedai").options[document.getElementById("kedai").selectedIndex].text;
-      var qty = document.getElementById("qty").options[document.getElementById("qty").selectedIndex].text;
+      var qty = document.getElementById("qty").value;
       var nomorMeja = document.getElementById("nomorMeja").value;
       var pesanan = document.getElementById("pesanan").value;
 
@@ -1282,7 +1275,7 @@
       document.getElementById("confirmKedai").innerText = "Menu : " + kedai;
       document.getElementById("confirmQty").innerText = "Berapa Banyak : " + qty;
       document.getElementById("confirmNomorMeja").innerText = "Nomor Meja : " + nomorMeja;
-      document.getElementById("confirmPesanan").innerText = "Pesanan : " + pesanan;
+      document.getElementById("confirmPesanan").innerText = "Catatan : " + pesanan;
 
       var overlay = document.getElementById("overlay");
       var popup = document.getElementById("popup");
@@ -1301,7 +1294,7 @@
       // Clear form fields
         document.getElementById("nama").value = "";
         document.getElementById("kedai").value = "0";
-        document.getElementById("qty").value = "0";
+        document.getElementById("qty").value = "";
         document.getElementById("nomorMeja").value = "";
         document.getElementById("pesanan").value = "";
     }
